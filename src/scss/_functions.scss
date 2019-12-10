@@ -1,0 +1,9 @@
+@function px2rem($value) {
+  $retval: $value * 100rem;
+  @return ($retval / 16) / 100;
+}
+
+@function px2lineheight($font-size, $line-height) {
+  $retval: $line-height/$font-size;
+  @return $retval;
+}

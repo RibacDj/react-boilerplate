@@ -1,0 +1,35 @@
+@import 'scss/base';
+
+* {
+  box-sizing: border-box;
+  @include focus-visible-outline;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+::-ms-clear {
+  display: none;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}

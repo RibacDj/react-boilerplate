@@ -1,0 +1,20 @@
+{
+  "extends": ["react-app", "prettier"],
+  "rules": {
+    "react/destructuring-assignment": 2,
+    "react/prop-types": 2,
+    "react/boolean-prop-naming": [
+      2,
+      {
+        "rule": "^(is|has)[A-Z0-9]([A-Za-z0-9]?)+",
+        "message": "It is better if your prop ({{ propName }}) matches this pattern: ({{ pattern }})"
+      }
+    ],
+    "react/default-props-match-prop-types": 2,
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-key": 2,
+    "react/jsx-no-comment-textnodes": 2,
+    "react/jsx-no-undef": 2,
+    "react/no-children-prop": 2
+  }
+}

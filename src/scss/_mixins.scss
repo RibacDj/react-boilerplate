@@ -1,0 +1,46 @@
+@mixin hide-scrollbar {
+  // Hidding scrollbars Firefox
+  scrollbar-width: none;
+
+  // Hidding scrollbars IE 10+
+  -ms-overflow-style: none;
+
+  // Hidding scrollbars on WebKit - Safari, Chrome, Opera
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@mixin input-reset {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin button-default {
+  outline: none;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin focus-outline($color: $color-black, $background-color: $color-white) {
+  box-shadow: 0 0 0 2px $background-color, 0 0 0 3px $color;
+}
+
+@mixin focus-visible-outline($color: $color-black, $background-color: $color-white) {
+  outline: none;
+
+  &.focus-visible {
+    @include focus-outline($color, $background-color);
+  }
+}
